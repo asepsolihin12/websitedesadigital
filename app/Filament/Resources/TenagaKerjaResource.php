@@ -9,6 +9,8 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Filament\Forms\Components\FileUpload;
+use Filament\Tables\Columns\ImageColumn;
 
 class TenagaKerjaResource extends Resource
 {
@@ -30,12 +32,27 @@ class TenagaKerjaResource extends Resource
                             ->label('Nama Lengkap')
                             ->required()
                             ->maxLength(255),
+
                         Forms\Components\TextInput::make('jabatan')
                             ->label('Jabatan')
                             ->required()
                             ->maxLength(255),
-                    ])->columns(2),
-                
+
+                        Forms\Components\FileUpload::make('gambar')
+                            ->label('Gambar Utama')
+                            ->image()
+                            ->directory('public') // Folder penyimpanan
+                            ->maxSize(5120) // 5MB
+                            ->imageResizeMode('cover')
+                            ->imageCropAspectRatio('16:9')
+                            ->imageResizeTargetWidth('800')
+                            ->imageResizeTargetHeight('450')
+                            ->helperText('Format: JPG, PNG, WEBP. Maksimal 5MB. Rasio 9:16 recommended.')
+                            ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                            ->nullable(), // Bisa kosong
+                    ])
+                    ->columns(3),
+
                 Forms\Components\Section::make('Kontak & Biodata')
                     ->schema([
                         Forms\Components\TextInput::make('kontak')
@@ -43,6 +60,7 @@ class TenagaKerjaResource extends Resource
                             ->required()
                             ->maxLength(255)
                             ->helperText('Email atau nomor telepon'),
+
                         Forms\Components\Textarea::make('bio')
                             ->label('Biodata Singkat')
                             ->required()
@@ -57,23 +75,34 @@ class TenagaKerjaResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\ImageColumn::make('gambar')
+                    ->disk('public')
+                    ->label('Gambar')
+                    ->circular()
+                    ->size(50)
+                    ->defaultImageUrl(url('/images/default-news.jpg')), // Fallback image
+
                 Tables\Columns\TextColumn::make('nama')
                     ->label('Nama')
                     ->searchable()
                     ->sortable(),
+
                 Tables\Columns\TextColumn::make('jabatan')
                     ->label('Jabatan')
                     ->searchable()
                     ->sortable()
                     ->badge()
                     ->color('primary'),
+
                 Tables\Columns\TextColumn::make('kontak')
                     ->label('Kontak')
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('bio')
                     ->label('Biodata')
                     ->limit(50)
                     ->wrap(),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Dibuat')
                     ->dateTime('d/m/Y H:i')

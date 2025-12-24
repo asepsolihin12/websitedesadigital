@@ -24,7 +24,7 @@
                 @else
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">Desa Langensari</h2>
                 <p class="text-gray-600 leading-relaxed text-lg mb-6">
-                    Desa Langensari adalah sebuah desa yang terletak di Kecamatan Banyumas, Kabupaten Banyumas, Jawa Tengah. 
+                    Desa Langensari adalah sebuah desa yang terletak di Kecamatan Langensari, Kota banjar, Jawa Barat. 
                     Desa ini dikenal dengan masyarakatnya yang ramah dan semangat gotong royong yang masih sangat kental.
                 </p>
                 <p class="text-gray-600 leading-relaxed text-lg">

@@ -5,7 +5,7 @@
             
             <!-- Logo + Deskripsi -->
             <div class="md:col-span-2 space-y-4">
-                    <span class="text-2xl font-bold text-white">Desa Langensari</span>
+                    <span class="text-2xl font-bold text-white">SIPMIL</span>
 
                 <p class="text-gray-400 leading-relaxed">
                     Sistem Pengaduan Masyarakat dan Informasi Resmi Desa Langensari.
@@ -49,7 +49,7 @@
                     <li class="flex gap-2 items-start">
                         <i class="fa-solid fa-location-dot mt-1"></i>
                         Jl. Raya Langensari No. 123  
-                        Banyumas, Jawa Tengah
+                        Kota Banjar, Jawa Barat
                     </li>
 
                     <li class="flex gap-2 items-center">

@@ -17,6 +17,7 @@ class TenagaKerja extends Model
         'jabatan',
         'bio',
         'kontak',
+        'gambar'
     ];
 
     // Scopes

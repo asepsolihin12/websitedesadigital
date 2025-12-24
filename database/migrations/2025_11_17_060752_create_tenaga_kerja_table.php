@@ -12,6 +12,7 @@ return new class extends Migration
             $table->id('id_tenaga');
             $table->string('nama');
             $table->string('jabatan');
+            $table->string('gambar');
             $table->text('bio');
             $table->string('kontak');
             $table->timestamps();

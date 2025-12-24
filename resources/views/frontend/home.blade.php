@@ -1,6 +1,6 @@
 @extends('frontend.layout.app')
 
-@section('title', 'Beranda - Desa Langensari')
+@section('title', 'Beranda - SIPMIL')
 
 @section('content')
 <!-- Hero Section Simple -->
@@ -14,7 +14,7 @@
     <div class="container mx-auto px-4 text-center">
         @if($hero)
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                {{ $hero->judul ?? 'Desa Langensari' }}
+                {{ $hero->judul ?? 'SIPMIL' }}
             </h1>
             @if($hero->subjudul)
                 <h2 class="text-xl md:text-2xl lg:text-3xl mb-6 text-orange-300">
@@ -22,7 +22,7 @@
                 </h2>
             @endif
             <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-                {{ $hero->deskripsi ?? 'Website resmi pemerintahan Desa Langensari' }}
+                {{ $hero->deskripsi ?? 'SISTEM PENGADUAN MASYARAKAT DAN INFORMASI LANGENSARI' }}
             </p>
         @else
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">

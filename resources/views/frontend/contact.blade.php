@@ -93,8 +93,8 @@
                                 <h4 class="font-semibold text-gray-800 mb-1">Alamat Kantor Desa</h4>
                                 <p class="text-gray-600">
                                     Jl. Raya Langensari No. 123<br>
-                                    Kec. Banyumas, Kab. Banyumas<br>
-                                    Jawa Tengah 53115
+                                    Kec. Langensari, Kota Banjar<br>
+                                    Jawa Barat 46343
                                 </p>
                             </div>
                         </div>

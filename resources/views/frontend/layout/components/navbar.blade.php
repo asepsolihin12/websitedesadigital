@@ -6,7 +6,7 @@
             <!-- Logo -->
             <div class="flex items-center gap-3">
                 <img src="{{ asset('images/logo.webp') }}" class="w-10 h-10 rounded-xl shadow-lg object-cover" alt="Logo Desa">
-                <span class="text-white font-bold text-xl">Desa Langensari</span>
+                <span class="text-white font-bold text-xl">SIPMIL</span>
             </div>
 
             <!-- Desktop Menu -->
